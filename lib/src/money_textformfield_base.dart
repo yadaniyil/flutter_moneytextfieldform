@@ -160,6 +160,10 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(6)),
               ),
+              contentPadding: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 14,
+                ),
             ),
           ),
           Padding(
