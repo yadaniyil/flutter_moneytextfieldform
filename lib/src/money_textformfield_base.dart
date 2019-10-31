@@ -142,7 +142,6 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(title, style: Theme.of(context).textTheme.caption),
           TextFormField(
             controller: ws.controller,
             inputFormatters: ws.inputFormatters,
