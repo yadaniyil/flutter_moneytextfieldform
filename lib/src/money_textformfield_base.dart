@@ -97,7 +97,6 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
       _useInternalController = true;
     }
 
-    ws.controller.text = '${_fmf.amount}';
     ws.controller.addListener(_onChanged);
 
     // inputFormatter handler
