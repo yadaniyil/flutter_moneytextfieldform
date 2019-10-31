@@ -139,14 +139,16 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
     return Padding(
       padding: wsa.padding,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          Text(title, style: Theme.of(context).textTheme.caption),
           TextFormField(
             controller: ws.controller,
             inputFormatters: ws.inputFormatters,
             validator: ws.validator,
             enabled: ws.enabled,
-            textAlign: TextAlign.right,
+            textAlign: TextAlign.left,
             style: wsa.inputStyle,
             keyboardType:
                 TextInputType.numberWithOptions(decimal: true, signed: true),
@@ -156,6 +158,9 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
               hintText: wsa.hintText,
               labelStyle: wsa.labelStyle,
               errorStyle: wsa.errorStyle,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(6)),
+              ),
             ),
           ),
           Padding(
