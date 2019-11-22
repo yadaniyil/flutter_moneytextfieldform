@@ -51,9 +51,11 @@ class MoneyTextFormFieldSettings {
       this.onChanged,
       this.moneyFormatSettings,
       this.appearanceSettings,
+       this.focusNode,
       this.enabled = true});
 
   TextEditingController controller;
+  FocusNode focusNode;
   FormFieldValidator<String> validator;
   List<TextInputFormatter> inputFormatters;
   VoidCallback onChanged;
@@ -67,11 +69,13 @@ class MoneyTextFormFieldSettings {
           FormFieldValidator<String> validator,
           List<TextInputFormatter> inputFormatters,
           VoidCallback onChanged,
+           FocusNode focusNode,
           MoneyFormatSettings moneyFormatSettings,
           AppearanceSettings appearanceSettings,
           bool enabled}) =>
       MoneyTextFormFieldSettings()
         ..controller = controller ?? this.controller
+            ..focusNode = focusNode ?? this.focusNode
         ..validator = validator ?? this.validator
         ..inputFormatters = inputFormatters ?? this.inputFormatters
         ..onChanged = onChanged ?? this.onChanged
