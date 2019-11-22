@@ -143,6 +143,7 @@ class _MoneyTextFormFieldState extends State<MoneyTextFormField> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           TextFormField(
+            focusNode: ws.focusNode,
             controller: ws.controller,
             inputFormatters: ws.inputFormatters,
             validator: ws.validator,
